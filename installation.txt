@@ -1,0 +1,27 @@
+npx create-next-app@latest tutorial or npx create-next-app@latest my-project --typescript --eslint --app
+
+npm install -D tailwindcss@3 postcss autoprefixer
+$ npx tailwindcss init -p
+
+For tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+For global css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+Then....npm run dev
+
+In the jsx...<h1 className="text-4xl font-bold text-blue-600">Hello, Tailwind!</h1>
